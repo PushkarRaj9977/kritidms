@@ -1982,7 +1982,7 @@ export function CreateOrder() {
   const navigate = useNavigate();
   const DENSITY = 1;
   const url = `/api/sap/opu/odata/sap/ZDMS_ORDER_REDESIGN_SRV/ProductsListSet?$filter=Kunnr eq '${storedDealer.UserName}' and Werks eq '1101' and Vtweg eq 'O3'and Bukrs eq '1100'`;
-  const fetchMaterialURL = 'http://udaan.kritinutrients.com/dealer/getMaterial'
+  const fetchMaterialURL = 'https://udaan.kritinutrients.com/dealer/getMaterial'
   const username = "dev01";
   const password = "Kriti@12";
   const config = {
@@ -2520,7 +2520,7 @@ export function CreateOrder() {
   //     storedDealer, cart, dealerCategory, SBOtype
   //   }
 
-  //   const response = axios.post('http://udaan.kritinutrients.com/dealer/insert-order', payLoad)
+  //   const response = axios.post('https://udaan.kritinutrients.com/dealer/insert-order', payLoad)
 
   //   console.log('Order submitted:', {
   //     dealerCategory,
@@ -2571,7 +2571,7 @@ export function CreateOrder() {
 
   //     // 🟢 Call Backend API
   //     const response = await axios.post(
-  //       "http://udaan.kritinutrients.com/dealer/insert-order",
+  //       "https://udaan.kritinutrients.com/dealer/insert-order",
   //       payLoad
   //     );
 
@@ -2637,7 +2637,7 @@ export function CreateOrder() {
   //     });
   //     // 🟢 Call Backend API
   //     const response = await axios.post(
-  //       "http://udaan.kritinutrients.com/dealer/insert-order",
+  //       "https://udaan.kritinutrients.com/dealer/insert-order",
   //       payLoad
   //     );
   //     // 🧾 Backend Response
@@ -2721,7 +2721,7 @@ export function CreateOrder() {
         SBOtype,
       };
 
-      const response = await axios.post("http://udaan.kritinutrients.com/dealer/insert-order", payLoad);
+      const response = await axios.post("https://udaan.kritinutrients.com/dealer/insert-order", payLoad);
       const result = response.data;
       if (result.success) {
         setAlertMessage({

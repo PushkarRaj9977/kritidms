@@ -66,7 +66,7 @@ export default function PendingContracts() {
       setLoading(true);
       const config = {
         method: "get",
-        url: "http://udaan.kritinutrients.com/dealer/getMaterial",
+        url: "https://udaan.kritinutrients.com/dealer/getMaterial",
       };
       const response = await axios(config);
       const apiSkus = response.data.data;

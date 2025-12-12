@@ -114,7 +114,7 @@
 //       setLoading(true);
 //       const config = {
 //         method: "get",
-//         url: "http://udaan.kritinutrients.com/dealer/getMaterial",
+//         url: "https://udaan.kritinutrients.com/dealer/getMaterial",
 //       };
 //       const response = await axios(config);
 //       const apiSkus = response.data.data;
@@ -1250,7 +1250,7 @@ export function MyOrders() {
       setLoading(true);
       const config = {
         method: "get",
-        url: "http://udaan.kritinutrients.com/dealer/getMaterial",
+        url: "https://udaan.kritinutrients.com/dealer/getMaterial",
       };
       const response = await axios(config);
       const apiSkus = response.data.data;
@@ -2079,7 +2079,7 @@ export function MyOrders() {
   //     // let isIndentDone = false;
   //     // try {
   //     //   const check = await axios.get(
-  //     //     `http://udaan.kritinutrients.com/dealer/checkIndentDone/${orderNo}/${material}`
+  //     //     `https://udaan.kritinutrients.com/dealer/checkIndentDone/${orderNo}/${material}`
   //     //   );
   //     //   isIndentDone = check.data?.done === true;
   //     // } catch (err) {
@@ -2137,7 +2137,7 @@ export function MyOrders() {
 
   //     // Step 3: Send indentMaterial
   //     // try {
-  //     //   await axios.post(`http://udaan.kritinutrients.com/dealer/indentMaterial`, {
+  //     //   await axios.post(`https://udaan.kritinutrients.com/dealer/indentMaterial`, {
   //     //     orderNo,
   //     //     material,
   //     //     items: allocatedItems,
@@ -2166,7 +2166,7 @@ export function MyOrders() {
 
   //       console.log(payload);
 
-  //       // await axios.post(`http://udaan.kritinutrients.com/dealer/updateSalesOrder`, payload);
+  //       // await axios.post(`https://udaan.kritinutrients.com/dealer/updateSalesOrder`, payload);
   //       console.log(`🧾 Sales order ${orderNo} updated successfully in SAP`);
   //     } catch (err) {
   //       console.error(`❌ Failed to update Sales Order ${orderNo}:`, err.message);
@@ -2282,7 +2282,7 @@ export function MyOrders() {
   //       console.log("🧾 Payload to SAP:", payload);
 
   //       // Uncomment when ready:
-  //       // await axios.post(`http://udaan.kritinutrients.com/dealer/updateSalesOrder`, payload);
+  //       // await axios.post(`https://udaan.kritinutrients.com/dealer/updateSalesOrder`, payload);
   //       console.log(`🧾 Sales order ${orderNo} updated successfully in SAP`);
   //     } catch (err) {
   //       console.error(`❌ Failed to update Sales Order ${orderNo}:`, err.message);
@@ -2414,7 +2414,7 @@ export function MyOrders() {
   //   //     console.log("🧾 Payload to SAP:", JSON.stringify(payload, null, 2));
 
   //   //     // 🔹 Uncomment below line to actually call backend
-  //   //     const res = await axios.post(`http://udaan.kritinutrients.com/dealer/indent-order`, payload);
+  //   //     const res = await axios.post(`https://udaan.kritinutrients.com/dealer/indent-order`, payload);
   //   //     if (res.status) {
   //   //       setAlertMessage({
   //   //         title: "updated successfully in SAP",

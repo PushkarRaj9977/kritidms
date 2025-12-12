@@ -71,7 +71,7 @@ const updateSalesOrder = async () => {
 //             console.log(`🔍 Checking indent for SO: ${S_ORDER_NO}, Matnr: ${MATERIAL_S}`);
 
 //             const checkIndent = await axios.get(
-//                 `http://udaan.kritinutrients.com/dealer/checkIndentDone/${S_ORDER_NO}/${MATERIAL_S}`
+//                 `https://udaan.kritinutrients.com/dealer/checkIndentDone/${S_ORDER_NO}/${MATERIAL_S}`
 //             );
 
 //             const indentDone = checkIndent.data?.done;
@@ -114,7 +114,7 @@ const updateSalesOrder = async () => {
 
 //             if (updated) {
 //                 console.log(`🚀 Hitting indentMaterial API for SO ${soNumber}`);
-//                 await axios.post("http://udaan.kritinutrients.com/dealer/indentMaterial", {
+//                 await axios.post("https://udaan.kritinutrients.com/dealer/indentMaterial", {
 //                     soNumber,
 //                     materials: allocatedItems,
 //                 });
@@ -140,7 +140,7 @@ export const breakeOrders = async (cart, pendingOrders) => {
 
             // Step 1: check indent
             const checkIndent = await axios.get(
-                `http://udaan.kritinutrients.com/dealer/checkIndentDone/${S_ORDER_NO}/${MATERIAL_S}`
+                `https://udaan.kritinutrients.com/dealer/checkIndentDone/${S_ORDER_NO}/${MATERIAL_S}`
             );
 
             if (checkIndent.data?.done) {
@@ -189,7 +189,7 @@ export const breakeOrders = async (cart, pendingOrders) => {
             // Step 4: mark indent done if SAP update successful
             if (updated) {
                 console.log(`🚀 Sending indentMaterial API for SO ${S_ORDER_NO}`);
-                await axios.post("http://udaan.kritinutrients.com/dealer/indentMaterial", {
+                await axios.post("https://udaan.kritinutrients.com/dealer/indentMaterial", {
                     SoNumber: S_ORDER_NO,
                     Material: MATERIAL_S,
                     quantity: allocatedWeight.toString(),

@@ -116,7 +116,7 @@
 //       setLoading(true);
 //       const config = {
 //         method: "get",
-//         url: "http://udaan.kritinutrients.com/dealer/getMaterial",
+//         url: "https://udaan.kritinutrients.com/dealer/getMaterial",
 //       };
 //       const response = await axios(config);
 //       const apiSkus = response.data.data;
@@ -1268,7 +1268,7 @@
 //       setLoading(true);
 //       const config = {
 //         method: "get",
-//         url: "http://udaan.kritinutrients.com/dealer/getMaterial",
+//         url: "https://udaan.kritinutrients.com/dealer/getMaterial",
 //       };
 //       const response = await axios(config);
 //       const apiSkus = response.data.data;
@@ -3028,7 +3028,7 @@ import getCategoryName from "../lib/getCategoryName";
 //       setLoading(true);
 //       const config = {
 //         method: "get",
-//         url: "http://udaan.kritinutrients.com/dealer/getMaterial",
+//         url: "https://udaan.kritinutrients.com/dealer/getMaterial",
 //       };
 //       const response = await axios(config);
 //       const apiSkus = response.data.data;
@@ -5209,7 +5209,7 @@ export function MyOrders() {
       setLoading(true);
       const config = {
         method: "get",
-        url: "http://udaan.kritinutrients.com/dealer/getMaterial",
+        url: "https://udaan.kritinutrients.com/dealer/getMaterial",
       };
       const response = await axios(config);
       const apiSkus = response.data.data;
@@ -6226,7 +6226,7 @@ export function MyOrders() {
 
         if (!processedOrders || processedOrders.length === 0) continue;
 
-        const res = await axios.post("http://udaan.kritinutrients.com/dealer/break-orders", {
+        const res = await axios.post("https://udaan.kritinutrients.com/dealer/break-orders", {
           filteredSOData: processedOrders,
         });
 

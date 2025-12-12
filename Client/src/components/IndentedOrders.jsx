@@ -11,7 +11,7 @@ const IndentedOrders = () => {
         setLoading(true);
         setError("");
         try {
-            const response = await axios.get("http://udaan.kritinutrients.com/dealer/getIndentOrders");
+            const response = await axios.get("https://udaan.kritinutrients.com/dealer/getIndentOrders");
             if (response.data.success) {
                 setOrders(response.data.data);
             } else {

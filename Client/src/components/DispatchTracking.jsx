@@ -522,7 +522,7 @@ export function DispatchTracking() {
   const fetchDispatchData = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://udaan.kritinutrients.com/dealer/dispatch");
+      const res = await axios.get("https://udaan.kritinutrients.com/dealer/dispatch");
       const sapData = res.data.data || [];
       console.log(sapData[0]);
       /* 🔥 CRITICAL PART – SHAPE MATCHING */

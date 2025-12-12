@@ -80,7 +80,7 @@
 //     console.log("\n✅ Final SO Data:", JSON.stringify(SOData, null, 2));
 //     console.log("✅ Final Material Data:", JSON.stringify(materialData, null, 2));
 
-//     const res = await axios.post("http://udaan.kritinutrients.com/dealer/break-orders", {
+//     const res = await axios.post("https://udaan.kritinutrients.com/dealer/break-orders", {
 //         filteredSOData,
 //     });
 //     console.log(res);
@@ -189,7 +189,7 @@
 //         console.log("✅ Final Material Data:", JSON.stringify(materialData, null, 2));
 
 //         // ✅ Send data to backend
-//         const res = await axios.post("http://udaan.kritinutrients.com/dealer/break-orders", {
+//         const res = await axios.post("https://udaan.kritinutrients.com/dealer/break-orders", {
 //             filteredSOData,
 //         });
 
@@ -328,7 +328,7 @@
 //         console.log(JSON.stringify(materialData, null, 2));
 
 //         // ✅ Send to backend (optional)
-//         const res = await axios.post("http://udaan.kritinutrients.com/dealer/break-orders", {
+//         const res = await axios.post("https://udaan.kritinutrients.com/dealer/break-orders", {
 //             filteredSOData,
 //         });
 
@@ -648,7 +648,7 @@
 // //         }
 
 // //         // ✅ Real API call to backend
-// //         const res = await axios.post("http://udaan.kritinutrients.com/dealer/break-orders", {
+// //         const res = await axios.post("https://udaan.kritinutrients.com/dealer/break-orders", {
 // //             filteredSOData,
 // //         });
 
@@ -827,7 +827,7 @@
 //             return { apiResponse: null, processedOrders: filteredSOData };
 //         }
 
-//         const res = await axios.post("http://udaan.kritinutrients.com/dealer/break-orders", {
+//         const res = await axios.post("https://udaan.kritinutrients.com/dealer/break-orders", {
 //             filteredSOData,
 //         });
 
@@ -946,7 +946,7 @@
 //         }
 
 //         // Real submit
-//         const res = await axios.post("http://udaan.kritinutrients.com/dealer/break-orders", {
+//         const res = await axios.post("https://udaan.kritinutrients.com/dealer/break-orders", {
 //             filteredSOData,
 //         });
 
@@ -1072,7 +1072,7 @@
 //             return { apiResponse: null, processedOrders: filteredSOData };
 //         }
 
-//         const res = await axios.post("http://udaan.kritinutrients.com/dealer/break-orders", {
+//         const res = await axios.post("https://udaan.kritinutrients.com/dealer/break-orders", {
 //             filteredSOData,
 //         });
 
@@ -1228,7 +1228,7 @@
 //             return { apiResponse: null, processedOrders: filteredSOData };
 //         }
 //         // FINAL SUBMISSION
-//         const res = await axios.post("http://udaan.kritinutrients.com/dealer/break-orders", {
+//         const res = await axios.post("https://udaan.kritinutrients.com/dealer/break-orders", {
 //             filteredSOData,
 //         });
 
@@ -1350,7 +1350,7 @@
 //         return { processedOrders: result };
 //     }
 //     const res = await axios.post(
-//         "http://udaan.kritinutrients.com/dealer/break-orders",
+//         "https://udaan.kritinutrients.com/dealer/break-orders",
 //         { filteredSOData: result }
 //     );
 
@@ -1480,7 +1480,7 @@ const BreakSalesOrder = async (SOInput, materialInput, options = {}) => {
     }
 
     const res = await axios.post(
-        "http://udaan.kritinutrients.com/dealer/break-orders",
+        "https://udaan.kritinutrients.com/dealer/break-orders",
         { filteredSOData: result }
     );
 

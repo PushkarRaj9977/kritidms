@@ -61,7 +61,7 @@
 //       }
 
 //       // 🔹 Axios POST request to your API
-//       const response = await axios.post('http://udaan.kritinutrients.com/dealer/login', {
+//       const response = await axios.post('https://udaan.kritinutrients.com/dealer/login', {
 //         dealerCode: credentials.dealerId, // ✅ matches backend
 //         password: credentials.password
 //       });
@@ -200,7 +200,7 @@ export function LoginPage({ onLogin }) {
         return;
       }
 
-      const response = await axios.post('http://udaan.kritinutrients.com/dealer/login', {
+      const response = await axios.post('https://udaan.kritinutrients.com/dealer/login', {
         dealerCode: credentials.dealerId,
         password: credentials.password,
       });

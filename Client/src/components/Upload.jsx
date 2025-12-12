@@ -49,7 +49,7 @@
 //         formData.append("file", file);
 
 //         try {
-//             const res = await axios.post("http://udaan.kritinutrients.com/admin/upload", formData, {
+//             const res = await axios.post("https://udaan.kritinutrients.com/admin/upload", formData, {
 //                 headers: { "Content-Type": "multipart/form-data" },
 //             });
 //             setMessage(res.data.message);
@@ -60,7 +60,7 @@
 //     };
 //     const fetchSKU = async () => {
 //         try {
-//             const res = await axios.get("http://udaan.kritinutrients.com/dealer/getMaterial");
+//             const res = await axios.get("https://udaan.kritinutrients.com/dealer/getMaterial");
 //             setSkuData(res.data.data)
 //         } catch (err) {
 //             console.error(err);
@@ -111,7 +111,7 @@ export const Upload = () => {
     // 🟢 Download Excel (All headers included, 4 columns empty)
     const handleDownloadFormat = async () => {
         try {
-            const res = await axios.get("http://udaan.kritinutrients.com/dealer/getMaterial");
+            const res = await axios.get("https://udaan.kritinutrients.com/dealer/getMaterial");
             const data = res.data.data || [];
 
             if (!data.length) {
@@ -185,7 +185,7 @@ export const Upload = () => {
         formData.append("file", file);
 
         try {
-            const res = await axios.post("http://udaan.kritinutrients.com/admin/upload", formData, {
+            const res = await axios.post("https://udaan.kritinutrients.com/admin/upload", formData, {
                 headers: { "Content-Type": "multipart/form-data" },
             });
             setMessage(res.data.message);

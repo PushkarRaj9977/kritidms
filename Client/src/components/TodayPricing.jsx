@@ -318,7 +318,7 @@
 //   const fetchMaterialData = async () => {
 //     try {
 //       const response = await axios.get(
-//         "http://udaan.kritinutrients.com/dealer/todayPrice"
+//         "https://udaan.kritinutrients.com/dealer/todayPrice"
 //       );
 //       if (response.data.success) {
 //         setMaterials(response.data.data);
@@ -592,7 +592,7 @@ export function TodayPricing() {
   const fetchMaterialData = async () => {
     try {
       const response = await axios.get(
-        "http://udaan.kritinutrients.com/dealer/todayPrice"
+        "https://udaan.kritinutrients.com/dealer/todayPrice"
       );
       if (response.data.success) {
         setMaterials(response.data.data);
