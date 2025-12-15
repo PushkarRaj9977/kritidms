@@ -13,7 +13,7 @@ export const loginController = async (req, res) => {
                 message: 'Dealer code and password are required',
             });
         }
-        const request = pool.request();
+        const request = (await pool).request();
         request.input('dealerCode', sql.VarChar, dealerCode);
         request.input('password', sql.VarChar, password);
 
@@ -51,7 +51,7 @@ export const loginController = async (req, res) => {
 };
 
 export const getTodayPriceController = async (req, res) => {
-    const request = pool.request();
+    const request = (await pool).request();
     const result = await request.query(`SELECT [Code]
       ,[Name]
       ,[KG_Price]
@@ -86,7 +86,7 @@ export const getTodayPriceController = async (req, res) => {
 }
 
 export const getMaterialController = async (req, res) => {
-    const request = pool.request();
+    const request = (await pool).request();
     const result = await request.query(`SELECT [Code]
       ,[Name]
       ,[KG_Price]
@@ -135,7 +135,7 @@ export const checkIndentDone = async (req, res) => {
             });
         }
 
-        const request = pool.request();
+        const request = (await pool).request();
         request.input("SO", sql.NVarChar(20), SO);
         request.input("Material", sql.NVarChar(10), Material);
 
@@ -191,7 +191,7 @@ export const hanldeIndentController = async (req, res) => {
             });
         }
 
-        const request = pool.request();
+        const request = (await pool).request();
         request.input("SoNumber", sql.NVarChar(20), SoNumber);
         request.input("Material", sql.NVarChar(10), Material);
         request.input("quantity", sql.NVarChar(10), quantity);
@@ -401,7 +401,7 @@ export const submitOrder = async (req, res) => {
 //           @ListPrice, @TotalPrice, @formattedDate, @category, @totalweightKG, @totalweightMT
 //         )
 //       `;
-//         const request = pool.request();
+//         const request = (await pool).request();
 //         const insertedOrder = await request
 //             .input("SalesOrder", sql.NVarChar(20), String(SalesOrder))
 //             .input("soldToParty", sql.NVarChar(20), String(dealer.UserName))
@@ -528,7 +528,7 @@ export const indentOrder = async (req, res) => {
         const Vbeln = d.Vbeln;
         const items = d.SalesHdrItemNav;
 
-        const request = pool.request();
+        const request = (await pool).request();
 
         // Loop and insert each item
         for (const item of items) {
@@ -565,7 +565,7 @@ export const indentOrder = async (req, res) => {
 
 export const getIndentOrders = async (req, res) => {
     try {
-        const request = pool.request();
+        const request = (await pool).request();
         const query = `
       SELECT [Vbeln], [Posnr], [Matnr], [Kwmeng], [Vrkme]
       FROM [DMS_KNL].[dbo].[indent_Table]
