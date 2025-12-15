@@ -23,7 +23,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://182.74.4.110:1081', // SAP API base URL
+        target: 'https://udaan.kritinutrients.com', // SAP API base URL
         changeOrigin: true, // Change the origin to match the target
         rewrite: (path) => path.replace(/^\/api/, ''), // Remove /api prefix
         secure: false, // Allow HTTP (insecure) or self-signed SSL (development only)
