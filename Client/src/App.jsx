@@ -215,6 +215,35 @@ function AppLayout() {
               path="/Upload"
               element={isLoggedIn ? <Upload /> : <Navigate to="/login" replace />}
             />
+            <Route
+              path="/reports"
+              element={isLoggedIn ? <Reports /> : <Navigate to="/login" replace />}
+            />
+
+            <Route
+              path="/notifications"
+              element={isLoggedIn ? <Notifications /> : <Navigate to="/login" replace />}
+            />
+
+            <Route
+              path="/process-management"
+              element={isLoggedIn ? <ProcessManagement /> : <Navigate to="/login" replace />}
+            />
+
+            <Route
+              path="/profile"
+              element={isLoggedIn ? <Profile /> : <Navigate to="/login" replace />}
+            />
+
+            <Route
+              path="/forget-password"
+              element={<ForgetPassword />}
+            />
+
+            <Route
+              path="/indented-orders"
+              element={isLoggedIn ? <IndentedOrders /> : <Navigate to="/login" replace />}
+            />
           </Routes>
         </main>
       </div>
