@@ -5,7 +5,7 @@ const config = {
   password: 'Admin@1235',
   server: 'localhost',
   port: 1433,
-  database: 'KritiDMS',
+  database: 'DMS_KNL',
   options: {
     encrypt: false,              // local dev
     trustServerCertificate: true

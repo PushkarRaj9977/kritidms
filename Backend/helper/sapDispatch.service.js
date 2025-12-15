@@ -5,7 +5,7 @@ const SAP_BASE_URL =
     "http://182.74.4.110:1084/sap/opu/odata/sap/ZDMS_ZFRT_DTL_SRV";
 
 const SAP_AUTH = {
-    username: "kritidms",
+    username: "DMS_KNL",
     password: "kriti@555",
 };
 
