@@ -1,4 +1,4 @@
-USE DMS_KNL;
+USE KritiDMS;
 GO
 
 -- Drop if exists (optional - remove in production if not needed)
